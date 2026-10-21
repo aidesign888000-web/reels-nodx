@@ -73,6 +73,6 @@ cmd += ["-f", "lavfi", "-i", aud, "-filter_complex", ";".join(fc), "-map", "[vou
 subprocess.run(cmd, check=True)
 out = f"{D}/reels/reel_{n:03d}.mp4"
 tags = "#estoicismo #filosofia #sabiduria #disciplina #mentalidad #reflexion #motivacion"
-caption = f"“{quote}” — {author}\n\nGuarda esto para cuando lo necesites. 🏔️\n\n{tags}"
+caption = f"“{quote}” — {author}\n\n❤️ Deja tu like si te sientes identificado con esta frase.\n💬 Y cuéntame en los comentarios: ¿cuál es tu autor o frase de referencia?\n\nGuarda esto para cuando lo necesites. 🏔️\n\n{tags}"
 used.append(i); json.dump(used, open(U, "w"))
 print(json.dumps({"file": out, "name": os.path.basename(out), "caption": caption, "author": author, "left": len(left) - 1}, ensure_ascii=False))
